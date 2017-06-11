@@ -1,0 +1,424 @@
+/* This section is for the designing of the login/register modal box */
+.modalDialog {
+	position: fixed;
+	font-family: 'Roboto', sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 5;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.form-signin-heading{
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog> div{
+	max-width: 560px;
+	position: relative;
+	margin: 7% auto;
+	
+	border-radius: 10px;
+	background: #999999;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { 
+	background: white; 
+}
+.form-signin {
+  max-width: 530px;
+  max-height: 450px;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  
+}
+.form-signin input{
+  margin-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: white;
+  border-color: #ec6952;
+}
+/* Ends here */
+
+
+.transition-500 {
+  transition-duration: 500ms;
+	-webkit-transition-duration: 500ms;
+	-ms-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+}
+
+.remove-decoration, .remove-decoration:hover, .remove-decoration:focus {
+  text-decoration: none;
+  color: #212121;
+}
+
+.toolbar-container {
+  position: relative;
+  z-index: 5;
+}
+
+.toolbar-container::after {
+  clear: both;
+}
+
+.logo, .logo:hover, .logo:focus {
+  float: left;
+  color: #fff;
+  background-color: #ec6952;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 10px 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media only screen and (min-width:768px) {
+  .logo, .logo:hover, .logo:focus {
+    padding: 15px 35px;
+  }
+}
+
+.toolbar-menu {
+  display: inline-block;
+  margin-top: 8px;
+  float: right;
+}
+
+@media only screen and (min-width:1199px) {
+  .toolbar-menu {
+    margin-top: 12px;
+  }
+}
+
+.toolbar-menu > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toolbar-menu > ul > li {
+  display: inline-block;
+}
+
+.btn-signin, .btn-signin:focus {
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.btn-signin:hover {
+  color: #fff;
+  background-color: #ec6952;
+  border-color: #ec6952;
+}
+
+.slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.slider-img {
+  display: none;
+  height: 675px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+}
+
+.effect-fade {
+  animation-name: effect-fade;
+  -webkit-animation-name: effect-fade;
+  -moz-animation-name: effect-fade;
+  -o-animation-name: effect-fade;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+}
+
+@keyframes effect-effect-fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@-webkit-keyframes effect-fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@-moz-keyframes effect-fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@-o-keyframes effect-fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.promo-container {
+  position: relative;
+  z-index: 5;
+  height: 430px;
+  padding-top: 80px;
+  margin-bottom: 80px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.promo-header {
+  font-size: 30px;
+  font-weight: 600;
+  line-height:1.2;
+}
+
+.promo-body {
+  font-size: 15px;
+  margin-top: 25px;
+  color: #ddd;
+  line-height:1.4;
+}
+
+.btn-promo {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ec6952;
+  padding: 10px 30px;
+  margin-top: 25px;
+}
+
+.btn-promo:hover {
+  color: #454545;
+  background-color: #eee;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+@media  only screen and (min-width:768px) {
+  .promo-container {
+    padding-top: 80px;
+    height: 450px;
+  }
+
+  .promo-header {
+    font-size: 40px;
+  }
+
+  .promo-body {
+    font-size: 20px;
+  }
+
+  .btn-promo {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .promo-container {
+    padding-top: 160px;
+    height: 530px;
+  }
+}
+
+.div-header {
+  color: #ec6952;
+  font-family: 'Roboto', sans-serif;
+  font-size: 27px;
+}
+
+.steps-header {
+  color: #ec6952;
+  border-bottom: 5px solid #414141;
+    padding-top:10px;
+  padding-bottom:10px;
+}
+
+.steps-text{
+	padding-top: 25px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 140%;
+}
+.steps-container {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.step-content: {
+  margin-top: 20px;
+}
+
+.step-title {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.step-img {
+  max-width: 150px;
+  display: block;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+
+@media only screen and (min-width:768px) {
+  .steps-container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .step-content {
+    margin-top: 30px;
+  }
+}
+
+.restaurant-container {
+	padding-top: 15px;
+	background-color: #f3f3f3;
+	padding-bottom: 60px;
+}
+
+.restaurant-name{
+	color: #333;
+}
+.restaurant-name:hover{
+	color: #333;
+	padding-top:3px;
+	padding-bottom:5px;
+	font-size:100%;
+	text-decoration: none;
+}
+.restaurant-header {
+  color: #ec6952;
+  border-bottom: 5px solid #414141;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.restaurant-div {
+  background-color: #fff;
+}
+
+.restaurant-item {
+  background-color:#fff;
+  padding-left:0;
+  padding-right:0;
+  margin-top:45px;
+}
+
+.restaurant-img {
+  height:120px;
+  width:120px;
+  background-color:#ec6952;
+  float:left;
+}
+
+.restaurant-content {
+  float:left;
+  margin-top:20px;
+  margin-left:20px;
+  line-height:0.9;
+}
+
+@media only screen and (max-width: 350px) {
+  .restaurant-content {
+    margin-left: 8px;
+  }
+}
+
+.restaurant-name {
+	font-size: 120%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.restaurant-location {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: #414141;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.footmenu{
+	color:white;
+}
+.footmenu> a {
+	text-decoration: none;
+	color: white;
+}

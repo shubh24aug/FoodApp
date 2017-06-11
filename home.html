@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food App | NEW</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto:400,500" rel="stylesheet">
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      var slideIndex = 0;
+      var i;
+      var slides = document.getElementsByClassName("slider-img");
+      showSlides();
+
+      function showSlides() {
+          for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex> slides.length) {
+            slideIndex = 1;
+          }
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 5000); // Change image every 5 seconds
+      }
+    });
+    </script>
+
+  </head>
+  <body>
+
+		<div id="myNavbar" class="toolbar-container">
+			<div class="container">
+
+				<a href="#" id="logo" class="logo remove-decoration">FoodApp</a>
+
+				<div class="toolbar-menu">
+					<ul>
+
+						<!-- <li class="post-signin-item" style="margin-right:5px;">Hi, Joe</li> -->
+
+						<span class="dropdown" id="profile">
+
+							<a href="#" class="dropdown-toggle remove-decoration" style="padding-right:0;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<img src="assets/images/profile-icon.jpg" alt="profile icon" class="img-circle"> </a>
+
+							<ul class="dropdown-menu">
+								<li><a href="#MyProfile" >My Profile</a></li>
+								<li><a href="#DiningHistory" >Dining History</a></li>
+								<li><a href="#Refer" >Refer to a Friend</a></li>
+								<li><a href="#Partner">Partner with Us</a></li>
+								<!-- <li><a href="#" class="post-signin-item">Signout</a></li> -->
+							</ul>
+						</span>
+
+						<li><a class="btn btn-xs btn-signin transition-500" href="#logModal">Login </a>|<a  class="btn btn-xs btn-signin transition-500" href="#regModal">Register</a></li>
+			
+			
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="slider-container">
+
+			<div class="slider-img effect-fade" style="background-image:url('assets/images/bg-1.jpg');"></div>
+
+			<div class="slider-img effect-fade" style="background-image:url('assets/images/bg-2.jpg');"></div>
+
+			<div class="slider-img effect-fade" style="background-image:url('assets/images/bg-3.jpg');"></div>
+		
+		</div>
+
+		<div class="promo-container container text-center">
+
+			<p class="promo-header">Get great discount on dining out
+			<br>
+			at your favourite restaurants</p>
+
+			<p class="promo-body">Simply pick a restaurant or a cafe to dine out at and get
+			<br>
+			discounts on checkout when you pay ! ! !</p>
+
+			<a id="promoButton" class="btn btn-lg btn-signin transition-500" href="#restaurants" role="button">Check our Restaurants</a>
+
+		</div>
+	
+		<div class="steps-container text-center">
+			<div class="container">
+       
+				<div class="steps-container text-center">
+					<p class="text-center div-header steps-header">How it Works</p>
+				</div>
+			<div class="row step-row">
+
+				<div class="col-sm-4 step-content">
+					<p class="step-title">Reserve a Table</p>
+					<img src="assets/images/step-3.png" alt="Step 1" class="img-responsive step-img">
+					<p class="steps-text">Pick a restaurant from the list and book a table.</p>
+				</div>
+
+				<div class="col-sm-4 step-content">
+					<p class="step-title">Enjoy the food</p>
+					<img src="assets/images/step-3.png" alt="Step 1" class="img-responsive step-img">
+					<p class="steps-text">Upon reaching the restaurant, place your order and enjoy the food.</p>
+				</div>
+
+				<div class="col-sm-4 step-content">
+					<p class="step-title">Pay and avail amazing Discounts</p>
+					<img src="assets/images/step-3.png" alt="Step 1" class="img-responsive step-img">
+					<p class="steps-text">Pay using our webapp to avail additional discounts.</p>
+				</div>
+
+			</div>
+		
+		</div>
+    </div>
+	
+	<div class="container-fluid restaurant-container" id="restaurants">
+		
+      <div class="container">
+
+			<div class="row">
+				<div>
+					<p class="text-center div-header restaurant-header" id="#restaurants">Our Restaurants<p>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-4 col-md-offset-1 col-sm-5 col-xs-12 restaurant-item">
+					<div class="restaurant-img"></div>
+						<div class="restaurant-content">
+							<a href="#" class="restaurant-name">Restaurant Name</a>
+			   			    <p class="restaurant-location">Restaurant Location</p>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 restaurant-item">
+            <div class="restaurant-img"></div>
+            <div class="restaurant-content">
+              <a href="#" class="restaurant-name">Restaurant Name</a>
+              <p class="restaurant-location">Restaurant Location</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-4 col-md-offset-1 col-sm-5 col-xs-12 restaurant-item">
+            <div class="restaurant-img"></div>
+            <div class="restaurant-content">
+              <a href="#" class="restaurant-name">Restaurant Name</a>
+              <p class="restaurant-location">Restaurant Location</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 restaurant-item">
+            <div class="restaurant-img"></div>
+            <div class="restaurant-content">
+              <a href="#" class="restaurant-name">Restaurant Name</a>
+              <p class="restaurant-location">Restaurant Location</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-4 col-md-offset-1 col-sm-5 col-xs-12 restaurant-item">
+            <div class="restaurant-img"></div>
+            <div class="restaurant-content">
+              <a href="#" class="restaurant-name">Restaurant Name</a>
+              <p class="restaurant-location">Restaurant Location</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 restaurant-item">
+            <div class="restaurant-img"></div>
+            <div class="restaurant-content">
+              <a href="#" class="restaurant-name">Restaurant Name</a>
+              <p class="restaurant-location">Restaurant Location</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-4 col-md-offset-1 col-sm-5 col-xs-12 restaurant-item">
+            <div class="restaurant-img"></div>
+            <div class="restaurant-content">
+              <a href="#" class="restaurant-name">Restaurant Name</a>
+              <p class="restaurant-location">Restaurant Location</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 restaurant-item">
+            <div class="restaurant-img"></div>
+            <div class="restaurant-content">
+              <a href="#" class="restaurant-name">Restaurant Name</a>
+              <p class="restaurant-location">Restaurant Location</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+	
+	<footer class="footer" style=" border-top: 3px solid #333;">
+		<p><span class="footmenu"><a href="#about" style="padding-left: 10px; padding-right: 10px; ">About Us</a> | <a href="#feedback" style="padding-left: 10px padding-right:10px; ">Feedback</a> | <a href="#partner" style="padding-left: 10px; padding-right:10px; ">Partner With Us</a> | <a href="#contact" style="padding-left: 10px; padding-right:10px;">Contact Us</a></span>
+		<span style="color:#fff; font-size: 110%;float: right; padding-right:10px;">Made with <span style="color: #e74c3c;">&hearts;</span> in India</span></p>
+    </footer>
+	
+	<div class="modalDialog" id="logModal" >
+				<div id="mod" >
+					<a href="#close" title="Close" class="close">X</a>
+					<div class="container" >
+						<form class="form-signin" >
+							<form class="form-signin" method=post action=homepage.html>
+								<h2 class="form-signin-heading">LOGIN</h2>
+								<br/>
+								<label for="inputEmail" style=" font-size:20px; padding: 15px;" class="sr-only"></label>
+								<input type=email name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+								<label for="inputPassword" style=" font-size:20px; padding: 14px;" class="sr-only"></label>
+								<input type=password name=pass1 id="inputPassword" class="form-control" placeholder="Password" required>
+								<div class="checkbox">
+									<label>
+										<center><input type="checkbox" value="remember-me"> Remember me</center>
+									</label>
+								</div>
+								<center><input class="btn btn-signin transition-500" style="color: black;" href="../NTCC/homepage.html" type=submit name=submit value="Sign-in" /> </center>
+							</form>
+						</form>
+					</div>
+				</div>
+		</div>
+		<div class="modalDialog" id="regModal">
+				<div id="mod">
+					<a href="#close" title="Close" class="close">X</a>
+					<div class="container">
+						<form class="form-signin" method=post action=homepage.html>
+							<h2 class="form-signin-heading">REGISTER</h2>
+							<br/>
+							<input type=text name=fname type="text" id="fname" class="form-control" placeholder="First Name" required />
+							<input type=text name=lname type="text" id="lname" class="form-control" placeholder="Last Name" required />
+							<input type=text name=email type="text" id="email" class="form-control" placeholder="Email-ID" required />
+							<input type=password type="password" id="txtPassword" class="form-control" placeholder="Password" required />
+							<input   type="password" id="txtConfirmpassword" class="form-control" placeholder="Retype Password" required /> <br/>
+							<select name=gender class="gender" class="form-control" placeholder="Gender" required >
+								<option id="male">Male</option> 
+								<option id="female">Female</option>
+								<option id="unspecified">Unspecified</option>
+							</select>
+							<br/>
+							<script type="text/javascript">
+								function{
+									var password = document.getElementById("txtPassword").value;
+									var confirmPassword = document.getElementById("txtConfirmPassword").value;
+									if (password != confirmPassword) {
+										alert("Passwords do not match.");
+										return false;
+									}
+									return true;
+								}
+							</script>
+							<br/>
+						
+								<center><input class="btn btn-signin transition-500" style="color: black;" href="../NTCC/homepage.html" type=submit name=submit value="Register" /> </center>
+						</form>
+					</div>
+				</div>
+		</div>
+  </body>
+</html>
