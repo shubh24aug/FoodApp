@@ -418,7 +418,8 @@
 .footmenu{
 	color:white;
 }
-.footmenu> a {
+.footmenu> a
+ {
 	text-decoration: none;
 	color: white;
 }
